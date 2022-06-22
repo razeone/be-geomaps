@@ -17,6 +17,7 @@ import java.util.List;
 public class GeoAssetResource {
 
     @GET
+    @Produces(MediaType.APPLICATION_JSON)
     public Uni<List<GeoAsset>> get() {
         return GeoAsset.listAll(Sort.by("name"));
     }
